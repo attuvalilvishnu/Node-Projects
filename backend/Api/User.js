@@ -36,7 +36,7 @@ route.post('/', async (req, res) => {
 
 route.delete('/:userId', async (req, resp) => {
   try {
-    const deletedUser = await User.remove({ id: req.params.userId });
+    const deletedUser = await User.remove({ _id: req.params.userId });
     resp.json(deletedUser);
   } catch (error) {
     resp.json({ msg: error });

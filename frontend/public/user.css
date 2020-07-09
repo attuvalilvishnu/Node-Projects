@@ -1,0 +1,44 @@
+.user-box {
+  border-style: groove;
+  height: 100px;
+  padding: 10px;
+  color: black;
+  background-color: whitesmoke;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+#box-wrapper {
+  padding: 20px;
+  margin: 10px;
+}
+
+.user-box img {
+  width: 70px;
+}
+
+.user-box .name {
+  position: relative;
+  bottom: 70px;
+  left: 90px;
+}
+
+.user-wrapper {
+  width: 90%;
+  padding: 20px;
+  margin-left: 70px;
+}
+
+.fa-edit {
+  position: relative;
+  left: 95%;
+  bottom: 100px;
+  cursor: pointer;
+}
+
+.fa-trash {
+  position: relative;
+  left: 89%;
+  bottom: 50px;
+  cursor: pointer;
+}

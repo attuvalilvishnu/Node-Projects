@@ -1,28 +1,23 @@
 <head>
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+    <link rel='stylesheet' href='user.css' />
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="text" />
-                            <button class="btn btn-primary my-2 my-sm-0" type="submit">
-                                Search
-                            </button>
-                        </form>
-                    </div>
-                </nav>
-                <div class="jumbotron card card-block">
-                    <h2>
-                        Hello, world!
-                    </h2>
-                </div>
-            </div>
+
+        <div class="row user-wrapper">
+            <div class="col-sm-3">Search <input type='text'></div>
+            <div class="col-sm-3">First Name <input type='text'></div>
+            <div class="col-sm-3">Last Name <input type='text'></div>
+            <button class="col-sm-2 btn btn-primary">Submit</button>
         </div>
+
+        <div id='box-wrapper' class="row">
+
+        </div>
+
     </div>
     <script src='user.js'> </script>
 </body>

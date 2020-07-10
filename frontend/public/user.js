@@ -1,6 +1,5 @@
 
 import ConstantsClass from './constants.js';
-
 import ClientService from './client-service.js';
 import DomService from './dom-service.js'
 (async () => {
@@ -12,6 +11,7 @@ import DomService from './dom-service.js'
     const init = async () => {
         await getAllUsers();
         addNewUserListner();
+        addSearchListner();
     };
 
     const getAllUsers = async () => {
@@ -22,6 +22,14 @@ import DomService from './dom-service.js'
     const addNewUserListner = () => {
         document.getElementById('submit').addEventListener('click', (event) => {
             addNewUser();
+        });
+    };
+
+    const addSearchListner = () => {
+        document.getElementById('search').addEventListener('keyup', async (event) => {
+            users = await getfilteredUser({ filterValue: event.currentTarget.value });
+            document.getElementById('box-wrapper').innerHTML = '';
+            createUserBoxWrapper();
         });
     };
 
@@ -40,14 +48,12 @@ import DomService from './dom-service.js'
         } catch (error) {
             console.log(error);
         }
-
     }
 
     const bindEvents = () => {
         bindEventForEdit();
         bindEventForDelete();
     }
-
 
     const bindEventForDelete = () => {
         const elements = document.getElementsByClassName('fa-trash');
@@ -136,6 +142,10 @@ import DomService from './dom-service.js'
                 bindEvents();
             }
         }
+    }
+
+    const getfilteredUser = async (data) => {
+        return await clientService.post(`${serverBaseUrl}api/users/filterByName`, data);
     }
 
     const getAllUserService = async () => {

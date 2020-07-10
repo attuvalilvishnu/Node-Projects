@@ -34,6 +34,25 @@ route.post('/', async (req, res) => {
   }
 });
 
+route.post('/filterByName', async (req, resp) => {
+  // const filterValue = req.body.filterValue;
+  try {
+    const filterValue = req.body.filterValue;
+    const user = await User.find(
+      {
+        $or:[
+          {firstName: { $regex: filterValue, $options: 'i' }},
+          {lastName: { $regex: filterValue, $options: 'i' }}
+        ]
+      }
+    );
+    resp.json(user);
+  } catch (error) {
+    console.log(error);
+  }
+
+});
+
 route.delete('/:userId', async (req, resp) => {
   try {
     const deletedUser = await User.remove({ _id: req.params.userId });

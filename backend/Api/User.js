@@ -46,8 +46,13 @@ route.delete('/:userId', async (req, resp) => {
 route.put('/:userId', async (req, resp) => {
   try {
     const updatedUser = await User.updateOne(
-      { id: req.params.userId },
-      { $set: { lastName: req.body.lastName } }
+      { _id: req.params.userId },
+      {
+        $set: {
+          firstName: req.body.firstName,
+          lastName: req.body.lastName
+        }
+      }
     );
     resp.json(updatedUser);
   } catch (error) {

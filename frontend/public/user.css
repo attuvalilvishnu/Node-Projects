@@ -29,7 +29,7 @@
   margin-left: 70px;
 }
 
-.fa-edit {
+.fa-edit, .fa-save {
   position: relative;
   left: 95%;
   bottom: 100px;

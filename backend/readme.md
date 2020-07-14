@@ -1,8 +1,8 @@
 
-To downlaod Dependencies
+# To downlaod Dependencies
 
-    npm run dev-dep-install
+    npm run install
 
-To start application
+# To start application
 
     npm start

@@ -1,7 +1,7 @@
 
 # To downlaod Dependencies
 
-    npm run install
+    npm run install_dev
 
 # To start application
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "bower install && npm i",
+    "install_dev": "bower install && npm i",
     "start": "nodemon app.js",
     "lint": "eslint"
   },

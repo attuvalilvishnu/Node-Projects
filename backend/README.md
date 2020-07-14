@@ -2,7 +2,7 @@
 
 # To downlaod Dependencies
 
-npm install
+npm i
 
 # To start express application
 

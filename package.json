@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-express": "nodemon express-app.js",
-    "start-http": "nodemon http-app.js"
+    "start-http": "nodemon http-app.js",
+    "install":"npm i"
   },
   "repository": {
     "type": "git",

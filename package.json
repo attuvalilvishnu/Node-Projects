@@ -1,0 +1,26 @@
+{
+  "name": "node-projects",
+  "version": "1.0.0",
+  "description": "api creation",
+  "main": "index.js",
+  "scripts": {
+    "start-express": "nodemon express-app.js",
+    "start-http": "nodemon http-app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attuvalilvishnu/Node-Projects.git"
+  },
+  "author": "vishnu Attuvallil Vijayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/attuvalilvishnu/Node-Projects/issues"
+  },
+  "homepage": "https://github.com/attuvalilvishnu/Node-Projects#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

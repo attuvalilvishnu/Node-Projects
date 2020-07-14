@@ -7,6 +7,6 @@ const userRoute = require('./route/user-route');
 app.use('/api/users/',userRoute);
 
 
-app.listen('3000', () => console.log('running on 4000...'));
+app.listen('3000', () => console.log('listening on 3000...'));
 
 
